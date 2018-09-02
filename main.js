@@ -104,9 +104,9 @@ async function update() {
       <span class="large">${f2c(
         weatherData.currently.apparentTemperature,
       )}</span> &deg;C
-      &emsp;<span class="large">${weatherData.currently.precipProbability *
-        100}</span> %
-    `);
+      &emsp;<span class="large">${
+        Math.ceil(weatherData.currently.precipProbability * 100)
+      }</span> %`);
 
     drawChart({
       id: 'temperature',
